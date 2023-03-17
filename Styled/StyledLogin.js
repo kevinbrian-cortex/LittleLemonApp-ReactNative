@@ -2,8 +2,10 @@ import styled from "styled-components/native";
 
 //iput
 export const StyledInput = styled.TextInput`
-  border: 1px solid #fefefe;
-  padding: 10px;
+  border: 1px solid #a4f883;
+  padding: 10px 15px;
+  border-radius: 100px;
+  margin-top: 10px;
 `;
 
 //styled
@@ -31,6 +33,5 @@ export const StyledBottomWrapper = styled.View`
   display: flex;
   flex-direction: column;
   gap: 25px;
-  /* justify-content: center; */
   align-items: center;
 `;
