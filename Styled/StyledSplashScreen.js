@@ -11,7 +11,7 @@ export const SplashScreenHeader = styled.View`
 `;
 
 export const SplashScreenHeaderBackGroundImage = styled.ImageBackground`
-  background-color: #A4F883;
+  background-color: #a4f883;
   border-bottom-left-radius: 250px;
 `;
 
@@ -21,14 +21,14 @@ export const SplashScreenHeadlogo = styled.View`
   background-color: white;
   padding: 30px;
   border-radius: 100px;
-  top: 300px;
+  top: 50px;
   border: 5px solid transparent;
-  border-color: #A4F883;
+  border-color: #a4f883;
 `;
 
 //Body style
 export const StyledSplashScreenBody = styled.View`
-  flex: 0.50;
+  flex: 0.5;
 `;
 
 export const StyledSplashScreenWrapper = styled.View`

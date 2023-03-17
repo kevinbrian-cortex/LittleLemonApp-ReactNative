@@ -13,7 +13,7 @@ const SplashScreenHead = () => {
         source={require("../../assets/zachary_unsplash.jpg")}
         resizeMode="cover"
         imageStyle={styles.imageStyle}
-        style={{ flex: 1 }}
+        style={{ flex: 1, alignItems : "center", justifyContent : "flex-end"}}
       >
         <SplashScreenHeadlogo>
           <Image
