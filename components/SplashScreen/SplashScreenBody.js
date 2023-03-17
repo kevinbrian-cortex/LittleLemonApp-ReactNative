@@ -7,7 +7,7 @@ import {
 import { ButtonPrimary } from "../../Styled/StyledButton";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-export default function SplashScreenBody() {
+export default function SplashScreenBody({ navigation }) {
   return (
     <StyledSplashScreenBody>
       <StyledSplashScreenWrapper>
@@ -18,7 +18,7 @@ export default function SplashScreenBody() {
           </Text>
         </View>
 
-        <ButtonPrimary>
+        <ButtonPrimary onPress={() => navigation.navigate("Login")}>
           <Text style={{ fontWeight: "bold", color: "#16233a" }}>
             <Text style={{ paddingLeft: 20 }}>Get Started for Free</Text>
             <Ionicons name="ios-chevron-forward-outline"></Ionicons>
