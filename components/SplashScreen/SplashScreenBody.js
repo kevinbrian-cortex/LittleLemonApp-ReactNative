@@ -5,6 +5,7 @@ import {
   StyledSplashScreenWrapper,
 } from "../../Styled/StyledSplashScreen";
 import { ButtonPrimary } from "../../Styled/StyledButton";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function SplashScreenBody() {
   return (
@@ -18,12 +19,17 @@ export default function SplashScreenBody() {
         </View>
 
         <ButtonPrimary>
-          <Text style={{ fontWeight: "bold" }}>Get Started for Free</Text>
+          <Text style={{ fontWeight: "bold", color: "#16233a" }}>
+            <Text style={{ paddingLeft: 20 }}>Get Started for Free</Text>
+            <Ionicons name="ios-chevron-forward-outline"></Ionicons>
+          </Text>
         </ButtonPrimary>
       </StyledSplashScreenWrapper>
 
-      <View style={{flex : 0.09}}>
-        <Text style={{textAlign : "center", fontWeight : "bold"}}>Made by Kevin Brian</Text>
+      <View style={{ flex: 0.09 }}>
+        <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+          Made by Kevin Brian
+        </Text>
       </View>
     </StyledSplashScreenBody>
   );
