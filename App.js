@@ -1,11 +1,13 @@
 import { StyleSheet, View, Text } from "react-native";
-import SplashScreen from "./components/SplashScreen/SplashScreen";
+import Splash from "./screens/Splash";
 import { StyledView } from "./Styled/StyledView";
+import Login from "./screens/Login";
 
 export default function App() {
   return (
     <StyledView>
-      <SplashScreen />
+      {/* <Splash /> */}
+      <Login />
     </StyledView>
   );
 }
