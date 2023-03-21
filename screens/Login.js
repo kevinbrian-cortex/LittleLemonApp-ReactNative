@@ -10,17 +10,22 @@ import {
 export default function Login() {
   return (
     <StyledLoginView>
-      <HeaderWrapper />
-      <FormWrapper />
-      <BottomWrapper />
       <View>
+        <HeaderWrapper />
+        <FormWrapper />
+        <BottomWrapper />
+        {/* <View>
         <Text style={{ textAlign: "center" }}>Developed by Kevin Brian</Text>
+      </View> */}
       </View>
     </StyledLoginView>
   );
 }
 
 //styled
-const StyledLoginView = styled.View`
+const StyledLoginView = styled.ScrollView`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
 `;
