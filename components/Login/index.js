@@ -39,7 +39,7 @@ export const HeaderWrapper = () => {
 };
 
 //Form
-export const FormWrapper = () => {
+export const FormWrapper = ({ navigation }) => {
   return (
     <StyledFormWrapper>
       <View>
@@ -55,9 +55,16 @@ export const FormWrapper = () => {
         <StyledInput secureTextEntry={true} placeholder="min 8 characters" />
       </View>
 
-      <ButtonPrimary>
+      <ButtonPrimary onPress={() => navigation.push("Register")}>
         <Text>Continue</Text>
       </ButtonPrimary>
+
+      <View style={styles.createAccount}>
+        <Text>Don't have account?</Text>
+        <Pressable onPress={() => navigation.push("Register")}>
+          <Text style={styles.link}>Create Account</Text>
+        </Pressable>
+      </View>
     </StyledFormWrapper>
   );
 };
@@ -66,7 +73,7 @@ export const FormWrapper = () => {
 export const BottomWrapper = () => {
   return (
     <StyledBottomWrapper>
-      <Text style={{fontSize : 17}}>or</Text>
+      <Text style={{ fontSize: 17 }}>or</Text>
 
       <Pressable style={styles.ButtonLink}>
         <Ionicons name="logo-google" style={styles.ButtonLinkIcon} />
@@ -95,5 +102,13 @@ const styles = StyleSheet.create({
   },
   ButtonLinkIcon: {
     fontSize: 30,
+  },
+  createAccount: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 5,
+  },
+  link: {
+    color: "#a4f883",
   },
 });

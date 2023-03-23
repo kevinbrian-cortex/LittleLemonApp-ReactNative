@@ -7,12 +7,12 @@ import {
   HeaderWrapper,
 } from "../components/Login/index";
 
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <StyledLoginView>
       <View>
         <HeaderWrapper />
-        <FormWrapper />
+        <FormWrapper navigation={navigation}/>
         <BottomWrapper />
         {/* <View>
         <Text style={{ textAlign: "center" }}>Developed by Kevin Brian</Text>
@@ -23,7 +23,7 @@ export default function Login() {
 }
 
 //styled
-const StyledLoginView = styled.ScrollView`
+export const StyledLoginView = styled.ScrollView`
   flex: 1;
   display: flex;
   flex-direction: column;

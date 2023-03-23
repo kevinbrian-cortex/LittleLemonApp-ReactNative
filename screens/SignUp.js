@@ -1,10 +1,18 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { View, Text } from "react-native";
+import { StepsProvider } from "react-step-builder";
+import { BottomWrapper } from "../components/Login";
+import StepsWrapper from "../components/Register/StepsWrapper";
+import { ButtonPrimary } from "../Styled/StyledButton";
+import { StyledLoginView } from "./Login";
 
 export default function SignUp() {
   return (
-    <View>
-      <Text>SignUp</Text>
-    </View>
+    <StyledLoginView>
+      <StepsProvider>
+        <StepsWrapper />
+      </StepsProvider>
+      <BottomWrapper />
+    </StyledLoginView>
   );
 }
