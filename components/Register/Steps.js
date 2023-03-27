@@ -1,7 +1,8 @@
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput, Button, Pressable } from "react-native";
 import React from "react";
 import { StyledInput } from "../../Styled/StyledLogin";
 import { ButtonPrimary } from "../../Styled/StyledButton";
+import { useSteps } from "react-step-builder";
 
 //[email, password]
 export function ContactInformation() {
@@ -19,8 +20,6 @@ export function ContactInformation() {
         <Text>Password</Text>
         <StyledInput secureTextEntry={true} placeholder="min 8 characters" />
       </View>
-
-      <SignUpButtonsWrapper />
     </View>
   );
 }
@@ -39,7 +38,7 @@ export function ProfileInformation() {
         <StyledInput secureTextEntry={true} placeholder="min 8 characters" />
       </View>
 
-      <SignUpButtonsWrapper />
+      {/* <SignUpButtonsWrapper /> */}
     </View>
   );
 }
@@ -64,12 +63,21 @@ export function RoleInformation() {
   );
 }
 
-const SignUpButtonsWrapper = (props) => {
+export const SignUpButtonsWrapper = (props) => {
+  const steps = useSteps();
+
   return (
     <View>
-      <ButtonPrimary>
+      <ButtonPrimary onPress={steps.next}>
         <Text>Continue</Text>
       </ButtonPrimary>
+
+      <Pressable
+        style={{ alignSelf: "center", padding: 30 }}
+        onPress={steps.prev}
+      >
+        <Text>Back</Text>
+      </Pressable>
     </View>
   );
 };

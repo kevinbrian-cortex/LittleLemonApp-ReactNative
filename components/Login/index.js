@@ -11,6 +11,7 @@ import {
 } from "../../Styled/StyledLogin";
 import { ButtonPrimary } from "../../Styled/StyledButton";
 import { StyleSheet } from "react-native";
+import { useSteps } from "react-step-builder";
 
 //Head
 export const HeaderWrapper = () => {

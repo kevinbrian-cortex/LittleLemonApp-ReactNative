@@ -5,14 +5,16 @@ import { BottomWrapper } from "../components/Login";
 import StepsWrapper from "../components/Register/StepsWrapper";
 import { ButtonPrimary } from "../Styled/StyledButton";
 import { StyledLoginView } from "./Login";
+import { SignUpButtonsWrapper } from "../components/Register/Steps";
 
 export default function SignUp() {
   return (
     <StyledLoginView>
       <StepsProvider>
         <StepsWrapper />
+        <SignUpButtonsWrapper />
+        <BottomWrapper />
       </StepsProvider>
-      <BottomWrapper />
     </StyledLoginView>
   );
 }
